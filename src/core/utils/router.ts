@@ -2,11 +2,11 @@ export const ROUTES = [
     {
         path: "/",
         name: "panel",
-        private: true
+        public: true,
     },
     {
         path: "/auth/login",
         name: "iniciar sesión",
-        private: true,
+        public: false,
     },
 ]
