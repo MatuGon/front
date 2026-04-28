@@ -1,12 +1,12 @@
-export const ROUTES = {
-    dashboard:{
+export const ROUTES = [
+    {
         path: "/",
         name: "panel",
         private: true
     },
-    login:{
+    {
         path: "/auth/login",
         name: "iniciar sesión",
         private: true,
     },
-}
+]
