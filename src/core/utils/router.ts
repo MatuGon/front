@@ -9,4 +9,9 @@ export const ROUTES = [
         name: "iniciar sesión",
         public: false,
     },
+    {
+        path: "/users",
+        name: "usuarios",
+        public: true,
+    }
 ]
