@@ -1,5 +1,7 @@
 <script lang="ts">
     import { ROUTES } from "@core/utils/router";
+    import{appStore} from "@core/utils/store.svelte";
+
     let { activePage } = $props();
 </script>
 
@@ -14,4 +16,10 @@
             >{route.name}</a
         >
     {/each}
+
+    <div class="p-2 flex justify-center">
+        <button onclick={() => appStore.toggledarkmode()} class="bg-gray-800 text-white px-4 py-2">
+            {appStore.isdarkmode ? '☀️' : '🌙'}
+        </button>
+    </div>
 </aside>
