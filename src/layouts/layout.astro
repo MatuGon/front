@@ -17,7 +17,7 @@ const { page } = Astro.props;
 		<ClientRouter />
 		<title>Sistema Inventario | {page}</title>
 	</head>
-	<body class="bg-gray-50 dark:bg-gray-950">
+	<body class="bg-gray-50 dark:bg-gray-950 text-slate-700 dark:text-slate-300 transition-all duration-300">
 		<div class="flex h-screen overflow-hidden">
 			<Sidebar client:load activePage={page?.toLowerCase()} />
 
