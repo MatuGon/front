@@ -3,7 +3,9 @@ import "@styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import Sidebar from "@components/sidebar.svelte";
 
-interface Props {page: string;}
+interface Props {
+	page: string;
+}
 const { page } = Astro.props;
 ---
 
@@ -17,7 +19,9 @@ const { page } = Astro.props;
 		<ClientRouter />
 		<title>Sistema Inventario | {page}</title>
 	</head>
-	<body class="bg-gray-50 dark:bg-gray-950 text-slate-700 dark:text-slate-300 transition-all duration-300">
+	<body
+		class="bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300"
+	>
 		<div class="flex h-screen overflow-hidden">
 			<Sidebar client:load activePage={page?.toLowerCase()} />
 
@@ -28,14 +32,14 @@ const { page } = Astro.props;
 			</main>
 		</div>
 		<script>
-			import {setTheme} from "@core/utils/setup";
+			import { setTheme } from "@core/utils/setup";
 
 			document.addEventListener("astro:page:load", (ev) => {
 				setTheme(ev.target);
 			});
-			document.addEventListener("astro:before-swap", (ev) =>{
-				setTheme (ev.newDocument);
-			})
+			document.addEventListener("astro:before-swap", (ev) => {
+				setTheme(ev.newDocument);
+			});
 		</script>
 	</body>
 </html>
