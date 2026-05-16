@@ -26,7 +26,7 @@
                 </button>
                 <button
                     class="bg-blue-400 text-white px-4 py-2 rounded-md"
-                    onclick={() => userModel.deleteUser(userModel.user)}
+                    onclick={() => userModel.deleteUser(userModel.user.id)}
                 >
                     Eliminar
                 </button>
