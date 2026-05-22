@@ -2,7 +2,7 @@
 /// <reference types="astro/client" />
 
 declare namespace App {
-    interface Locals {
-        PUBLIC_API_URL: string
-    }
+  interface Locals {
+    PUBLIC_API_URL: string;
+  }
 }

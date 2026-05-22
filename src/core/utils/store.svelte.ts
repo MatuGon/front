@@ -1,11 +1,13 @@
-class Appstore {
-    isdarkmode = $state(false);
-    issidebaropen = $state(true);
 
-    toggledarkmode() {
-        this.isdarkmode = !this.isdarkmode;
-        localStorage.setItem('color-theme', this.isdarkmode.toString());
-        window.document.documentElement.classList.toggle('dark', this.isdarkmode);
+class AppStore {
+    isDarkMode = $state(false);
+    isSidebarOpen = $state(true);
+
+    toggleDarkMode() {
+        this.isDarkMode = !this.isDarkMode;
+        localStorage.setItem('color-theme', this.isDarkMode ? 'dark' : 'light');
+        window.document.documentElement.classList.toggle('dark', this.isDarkMode);
     }
+
 }
-export const appStore = new Appstore();
+export const appStore = new AppStore();

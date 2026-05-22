@@ -1,9 +1,10 @@
 ---
-import Layout from '../layouts/layout.astro';
-import Tabla from '@components/users/tabla.svelte';
+import Tabla from "@components/users/Tabla.svelte";
+import Layout from "@layouts/layout.astro";
 ---
 
-<Layout page="users">
-    <h1 class="text-2xl font-bold">Usuarios</h1>
-    <Tabla client:visible/>
+<Layout page="Usuarios">
+    <h1 class="text-2xl font-bold mb-4">Usuarios</h1>
+
+    <Tabla client:visible />
 </Layout>

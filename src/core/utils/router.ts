@@ -1,17 +1,27 @@
 export const ROUTES = [
     {
         path: "/",
-        name: "panel",
-        public: true,
-    },
-    {
-        path: "/auth/login",
-        name: "iniciar sesión",
+        name: "Panel",
         public: false,
     },
     {
-        path: "/users",
-        name: "usuarios",
+        path: "/auth/login",
+        name: "Iniciar Sesion",
         public: true,
-    }
+    },
+    {
+        path: "/users",
+        name: "Usuarios",
+        public: false
+    },
+    {
+        path: "/categories",
+        name: "Categorias",
+        public: false
+    },
+    // {
+    //     path: "/products",
+    //     name: "Productos",
+    //     public: false
+    // },
 ]

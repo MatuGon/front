@@ -3,13 +3,12 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
-    "baseUrl": "./",
     "paths": {
       "@styles/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
-      "@layout": ["./src/layout/*"],
+      "@layouts/*": ["./src/layouts/*"],
       "@core/*": ["./src/core/*"],
-      "@utils/*": ["./src/utils/*"]
-    }
+      "@utils/*": ["./src/core/utils/*"],
+    },
   }
 }

@@ -1,7 +1,7 @@
-interface importMetalEnv{
-    readonly PUBLIC_API_URL: string;
+interface ImportMetaEnv {
+  readonly PUBLIC_API_URL: string;
 }
 
 interface ImportMeta {
-    readonly env: importMetalEnv
+  readonly env: ImportMetaEnv;
 }
