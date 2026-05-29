@@ -24,4 +24,9 @@ export const ROUTES = [
         name: "Productos",
         public: false
     },
+    {
+        phath: "/suppliers",
+        name: "Proveedores",
+        public: false
+    },
 ]

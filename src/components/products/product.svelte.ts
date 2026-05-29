@@ -1,6 +1,8 @@
 import { http } from "@core/http"
 
 interface Product {
+    stock: any;
+    priceUnit: any;
     id: number
     name: string
 }
