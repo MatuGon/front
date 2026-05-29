@@ -25,7 +25,7 @@ export const ROUTES = [
         public: false
     },
     {
-        phath: "/suppliers",
+        path: "/suppliers",
         name: "Proveedores",
         public: false
     },
