@@ -1,6 +1,12 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
   let { productModel } = $props();
   let id = $props.id();
+  import { categoryModel } from '../categories/category.svelte';
+
+  onMount(() => {
+    categoryModel.getCategories();
+  });
 </script>
 
 {#if productModel.createDialog}
@@ -47,14 +53,16 @@
   <label for="category" class="block text-sm font-bold">
     Categoría:
   </label>
-
-  <input
-    class="border border-gray-400 rounded-md p-2"
-    placeholder="Ingrese el ID de categoría"
-    type="number"
-    id={`category-${id}`}
-    name="categoryId"
-  />
+<select
+  class="border border-gray-400 rounded-md p-2"
+  id={`category-${id}`}
+  name="categoryId"
+>
+  <option value="" disabled selected>Seleccione una categoría</option>
+  {#each categoryModel.categories as category}
+    <option value={category.id}>{category.name}</option>
+  {/each}
+</select>
 </div>
         <div class="p-2 flex justify-end gap-2 mt-3">
                     <button
